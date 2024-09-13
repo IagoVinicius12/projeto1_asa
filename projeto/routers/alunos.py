@@ -9,20 +9,20 @@ router = APIRouter()
 @router.get("/alunos")
 def get(db: Session = Depends(get_db)):
     all_alunos = db.query(Alunos).all()
-    alunos = []
-    for aluno in all_alunos:
-        item =  {
-                "id": aluno.id,
-                "nome": aluno.nome,
-                "email": aluno.email,
-                "cpf": aluno.cpf,
-                "endereco": aluno.endereco,
-                "numero": aluno.numero,
-                "complemento": aluno.complemento,
-                "cidade": aluno.cidade,
-                "estado": aluno.estado
-                }
-        alunos.append(item)       
+    # alunos = []
+    # for aluno in all_alunos:
+    #     item =  {
+    #             "id": aluno.id,
+    #             "nome": aluno.nome,
+    #             "email": aluno.email,
+    #             "cpf": aluno.cpf,
+    #             "endereco": aluno.endereco,
+    #             "numero": aluno.numero,
+    #             "complemento": aluno.complemento,
+    #             "cidade": aluno.cidade,
+    #             "estado": aluno.estado
+    #             }
+    #     alunos.append(item)       
     return all_alunos
 
 @router.get("/alunos/{id}")
