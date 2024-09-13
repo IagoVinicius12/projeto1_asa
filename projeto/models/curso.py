@@ -6,8 +6,5 @@ class Curso(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     nome = Column(String(50), nullable=False)
-    carga_horaria = Column(Integer, nullable=False)
-    periodo = Column(Integer, nullable=False)
-    descricao = Column(String(200), nullable=False)
-    added_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('Now()'))
+    idprofessor=Column(Integer,ForeignKey('professor.id'),nullable=False)
     
