@@ -7,7 +7,7 @@ class Professor(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     nome = Column(String(50), nullable=False)
     email = Column(String(50), nullable=False)
-    CPF = Column(Integer, nullable=False)
+    cpf = Column(Integer, nullable=False)
     endereco = Column(String(45), nullable=False)
     numero=Column(Integer,nullable=False)
     complemento=Column(String(45),nullable=False)
